@@ -5,6 +5,7 @@ import {
   premiereImage,
   storyImages,
   unescoImages,
+  mediaImages,
 } from "@/data/media";
 import {
   immerseCards,
@@ -43,7 +44,7 @@ export default async function LocalizedPage(props: any) {
   const locale: Locale = p.locale ?? "uk";
   const dict = getDictionary(locale);
   return (
-  <div className="font-sans bg-white dark:bg-neutral-950 dark:text-neutral-100">
+    <div className="font-sans bg-white dark:bg-neutral-950 dark:text-neutral-100">
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-white/80 dark:bg-neutral-950/80 border-b border-neutral-200 dark:border-neutral-800">
         <div className="max-w-7xl mx-auto flex items-center gap-6 px-4 h-14 text-sm">
           <a
@@ -227,11 +228,11 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-  <Section id="performers" className="bg-white dark:bg-neutral-950">
+      <Section id="performers" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk" ? "Виконавці" : "Performers"}
         </h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {performersData.map((p) => (
             <div
               key={p.img + p.nameUk}
@@ -265,7 +266,7 @@ export default async function LocalizedPage(props: any) {
       {/* Removed intermediate navigation pill */}
 
       {/* Spotlight / Area7 */}
-  <Section id="spotlight" className="bg-neutral-50 dark:bg-neutral-900/60">
+      <Section id="spotlight" className="bg-neutral-50 dark:bg-neutral-900/60">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           <div className="flex flex-col gap-6">
             <div className="relative rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 aspect-[4/3]">
@@ -310,7 +311,7 @@ export default async function LocalizedPage(props: any) {
       {/* Removed intermediate navigation pill */}
 
       {/* Immersion / Area8 */}
-  <Section id="immersion" className="bg-white dark:bg-neutral-950">
+      <Section id="immersion" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk" ? dict.immersion.heading : dict.immersion.heading}
         </h2>
@@ -357,7 +358,10 @@ export default async function LocalizedPage(props: any) {
         </blockquote>
       </Section>
 
-  <Section id="press-quote" className="bg-neutral-50 dark:bg-neutral-900/60">
+      <Section
+        id="press-quote"
+        className="bg-neutral-50 dark:bg-neutral-900/60"
+      >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="relative aspect-[3/2] rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100">
             <Image
@@ -414,9 +418,7 @@ export default async function LocalizedPage(props: any) {
               <p className="text-sm md:text-base leading-relaxed text-neutral-600 dark:text-neutral-400 mb-8">
                 {dict.gratitude.text2}
               </p>
-              <Button className="w-full md:w-auto">
-                {dict.gratitude.cta}
-              </Button>
+              <Button className="w-full md:w-auto">{dict.gratitude.cta}</Button>
             </div>
           </div>
           <div className="order-1 md:order-2">
@@ -458,7 +460,62 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <Section id="revival-team" className="bg-neutral-50 dark:bg-neutral-900/60">
+      {/* Media Press Kit Section */}
+      <Section id="media" className="bg-neutral-50 dark:bg-neutral-900/60">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-900 dark:text-white leading-tight">
+              {dict.media.title}
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              {dict.media.subtitle}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            {dict.media.items.map((item, index) => (
+              <div key={index} className="group">
+                <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg overflow-hidden border border-neutral-200 dark:border-neutral-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src={mediaImages[index]}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-center inline-block"
+            >
+              {dict.media.cta.presskit}
+            </a>
+            <a 
+              href="#"
+              className="border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-center inline-block"
+            >
+              {dict.media.cta.contacts}
+            </a>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        id="revival-team"
+        className="bg-neutral-50 dark:bg-neutral-900/60"
+      >
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk"
             ? "Люди, які повернули «Креонте»"
@@ -492,7 +549,7 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-  <Section id="future" className="bg-white dark:bg-neutral-950">
+      <Section id="future" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
           {dict.future.heading}
         </h2>
@@ -505,7 +562,7 @@ export default async function LocalizedPage(props: any) {
         </ul>
       </Section>
 
-  <Section className="bg-neutral-100 dark:bg-neutral-900/60" id="contact">
+      <Section className="bg-neutral-100 dark:bg-neutral-900/60" id="contact">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">
             {dict.final.title}

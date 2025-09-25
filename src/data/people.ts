@@ -129,8 +129,7 @@ export const performersData = [
       "Завідувачка кафедри старовинної музики, кандидатка мистецтвознавства, лауреатка міжнародних конкурсів",
     nameEn: "Olha Shadrina-Lychak",
     roleEn: "Harpsichord solo",
-    descEn:
-      "Head of Early Music Dept., musicology PhD, competition laureate",
+    descEn: "Head of Early Music Dept., musicology PhD, competition laureate",
   },
   {
     img: "/media/performer-dumka-choir.jpg",

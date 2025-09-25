@@ -13,3 +13,9 @@ export const unescoImages = [
   "/media/unesco-support-5.jpg",
   "/media/unesco-support-6.jpg",
 ];
+
+export const mediaImages = [
+  "/media/photo-a14-001.jpg",
+  "/media/photo-a14-002.jpg", 
+  "/media/photo-a14-003.jpg",
+];

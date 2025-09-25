@@ -6,7 +6,9 @@ type Mode = "light" | "dark" | "system";
 function applyTheme(theme: Mode) {
   const root = document.documentElement;
   if (theme === "system") {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     if (prefersDark) root.classList.add("dark");
     else root.classList.remove("dark");
     return;
@@ -50,15 +52,12 @@ export const ThemeToggle = () => {
   if (!mounted) return null;
 
   const cycle = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : prev === "dark" ? "system" : "light"));
+    setTheme((prev) =>
+      prev === "light" ? "dark" : prev === "dark" ? "system" : "light"
+    );
   };
 
-  const icon =
-    theme === "light"
-      ? "☀️"
-      : theme === "dark"
-      ? "🌙"
-      : "🌓"; // system
+  const icon = theme === "light" ? "☀️" : theme === "dark" ? "🌙" : "🌓"; // system
 
   const label =
     theme === "light" ? "Light" : theme === "dark" ? "Dark" : "System"; // For screen readers

@@ -72,12 +72,27 @@ export const en = {
   gratitude: {
     heading: "Together we create cultural revival",
     subtitle: "Thank you for your support",
-    text1: "The return of 'CREONTE' was made possible thanks to the support of partners and patrons who believed in the power of art and its significance for Ukraine and the world. Their participation is a contribution to preserving cultural heritage and opening new pages in European music history.",
-    text2: "We are sincerely grateful to everyone who joined this project. Thanks to you, lost masterpieces come alive again.",
+    text1:
+      "The return of 'CREONTE' was made possible thanks to the support of partners and patrons who believed in the power of art and its significance for Ukraine and the world. Their participation is a contribution to preserving cultural heritage and opening new pages in European music history.",
+    text2:
+      "We are sincerely grateful to everyone who joined this project. Thanks to you, lost masterpieces come alive again.",
     cta: "Become a partner",
   },
   theatrical: {
     title: "Theatrical Production",
+  },
+  media: {
+    title: "Open for media collaboration",
+    subtitle: "We have prepared a convenient press kit for journalists and media partners. Here you will find",
+    items: [
+      { title: "Official photos from the premiere" },
+      { title: "Logos and visual materials" },
+      { title: "Press release in Ukrainian and English" },
+    ],
+    cta: {
+      presskit: "View press kit",
+      contacts: "Journalist contacts",
+    },
   },
   future: {
     heading: "CREONTive Europe",
