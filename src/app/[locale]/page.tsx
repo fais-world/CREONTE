@@ -1,15 +1,24 @@
 import ThemeToggle from "@/components/ThemeToggle";
 import Button from "@/components/ui/Button";
+import {
+  heroImage,
+  premiereImage,
+  storyImages,
+  unescoImages,
+} from "@/data/media";
+import {
+  immerseCards,
+  partners,
+  performersData,
+  revivalPeople,
+} from "@/data/people";
 import { getDictionary, locales, type Locale } from "@/i18n/getDictionary";
 import Image from "next/image";
 import React from "react";
-import { heroImage, storyImages, premiereImage, unescoImages } from "@/data/media";
-import { immerseCards, revivalPeople, performersData, partners } from "@/data/people";
 
 interface Params {
   params: { locale: Locale };
 }
-
 
 const Section = ({
   id,
@@ -84,14 +93,14 @@ export default async function LocalizedPage(props: any) {
 
       <Section
         id="hero"
-        className="pt-32 md:pt-40 bg-gradient-to-b from-neutral-50 to-white"
+        className="pt-32 md:pt-40 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-950"
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-stretch md:items-center">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               {dict.hero.title}
             </h1>
-            <p className="text-lg md:text-xl text-neutral-600 mb-8">
+            <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 mb-8">
               {dict.hero.subtitle}
             </p>
             <div className="flex flex-wrap gap-3">
@@ -99,30 +108,21 @@ export default async function LocalizedPage(props: any) {
               <Button variant="outline">{dict.hero.ctas.invite}</Button>
               <Button variant="ghost">{dict.hero.ctas.partner}</Button>
             </div>
-            <div className="mt-10">
-              <a
-                href="#story"
-                className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-              >
-                {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
-                <span aria-hidden>→</span>
-              </a>
-            </div>
           </div>
-          <div className="relative flex items-center justify-center w-full max-w-[540px] mx-auto aspect-square md:aspect-[4/5] lg:aspect-[3/4]">
+          <div className="relative flex items-center justify-center w-full max-w-[460px] md:max-w-[520px] mx-auto aspect-square md:aspect-[4/5] lg:aspect-[3/4]">
             <Image
               src={heroImage}
               alt="CREONTE"
               width={800}
               height={800}
-              className="w-full h-full object-contain md:object-cover rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40"
+              className="w-full h-full object-contain rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40 dark:bg-neutral-800/40"
               priority
             />
           </div>
         </div>
       </Section>
 
-      <Section id="story" className="bg-neutral-50">
+      <Section id="story" className="bg-neutral-50 dark:bg-neutral-900/60">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {dict.story.heading}
         </h2>
@@ -130,33 +130,24 @@ export default async function LocalizedPage(props: any) {
           {dict.story.cards.map((s: any, i: number) => (
             <div
               key={s.title}
-              className="group border border-neutral-200 rounded-lg p-4 flex flex-col gap-4 bg-white hover:shadow-sm transition"
+              className="group border border-neutral-200 dark:border-neutral-700 rounded-lg p-4 flex flex-col gap-4 bg-white dark:bg-neutral-900 hover:shadow-sm transition"
             >
-              <div className="aspect-[4/3] overflow-hidden rounded-md bg-neutral-100">
+              <div className="aspect-[4/3] overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
                 <Image
                   src={storyImages[i]}
                   alt={s.title}
                   width={600}
                   height={450}
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  className="w-full h-full object-contain transition-transform"
                 />
               </div>
               <h3 className="font-semibold text-lg">{s.title}</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 {s.text}
               </p>
             </div>
           ))}
-        </div>
-        <div className="mt-16 text-center">
-          <a
-            href="#premiere"
-            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-          >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
-            <span aria-hidden>→</span>
-          </a>
         </div>
       </Section>
 
@@ -178,13 +169,13 @@ export default async function LocalizedPage(props: any) {
         </div>
       </div>
 
-      <Section id="premiere">
+      <Section id="premiere" className="bg-white dark:bg-neutral-950">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold mb-6">
               {dict.premiere.title}
             </h2>
-            <p className="text-neutral-600 leading-relaxed mb-6">
+            <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
               {dict.premiere.text}
             </p>
             <Button variant="outline">{dict.premiere.gallery}</Button>
@@ -200,20 +191,11 @@ export default async function LocalizedPage(props: any) {
             />
           </div>
         </div>
-        <div className="mt-16 text-center">
-          <a
-            href="#unesco"
-            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-          >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
-            <span aria-hidden>→</span>
-          </a>
-        </div>
       </Section>
 
       {/* (Legacy temporary gallery & team sections removed; replaced by UNESCO gallery, performers and revival team sections) */}
 
-      <Section id="unesco" className="bg-neutral-50">
+      <Section id="unesco" className="bg-neutral-50 dark:bg-neutral-900/60">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
           {locale === "uk"
             ? "Перша опера, відроджена за підтримки ЮНЕСКО"
@@ -240,18 +222,9 @@ export default async function LocalizedPage(props: any) {
             {locale === "uk" ? "До Галереї" : "Open Gallery"}
           </Button>
         </div>
-        <div className="mt-10 text-center">
-          <a
-            href="#performers"
-            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-          >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
-            <span aria-hidden>→</span>
-          </a>
-        </div>
       </Section>
 
-      <Section id="performers" className="bg-white">
+  <Section id="performers" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk" ? "Виконавці" : "Performers"}
         </h2>
@@ -286,32 +259,32 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <div className="text-center -mt-4 mb-8">
-        <a
-          href="#spotlight"
-          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-        >
-          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
-          <span aria-hidden>→</span>
-        </a>
-      </div>
+      {/* Removed intermediate navigation pill */}
 
       {/* Spotlight / Area7 */}
-      <Section id="spotlight" className="bg-neutral-50">
+  <Section id="spotlight" className="bg-neutral-50 dark:bg-neutral-900/60">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           <div className="flex flex-col gap-6">
             <div className="relative rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 aspect-[4/3]">
               <Image
                 src="/media/performer-makarenko.jpg"
-                alt={locale === "uk" ? dict.spotlight.cardTitle : dict.spotlight.cardTitle}
+                alt={
+                  locale === "uk"
+                    ? dict.spotlight.cardTitle
+                    : dict.spotlight.cardTitle
+                }
                 fill
                 sizes="(max-width:768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
             <div className="p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-              <div className="font-semibold text-lg mb-1">{dict.spotlight.cardTitle}</div>
-              <div className="text-sm text-neutral-500 mb-2">{dict.spotlight.cardSubtitle}</div>
+              <div className="font-semibold text-lg mb-1">
+                {dict.spotlight.cardTitle}
+              </div>
+              <div className="text-sm text-neutral-500 mb-2">
+                {dict.spotlight.cardSubtitle}
+              </div>
               <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
                 {dict.spotlight.cardText}
               </p>
@@ -322,26 +295,19 @@ export default async function LocalizedPage(props: any) {
               {dict.spotlight.heading}
             </h2>
             <div className="space-y-5 text-sm md:text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
-              {dict.spotlight.body && dict.spotlight.body.map((para: string) => (
-                <p key={para.slice(0,40)}>{para}</p>
-              ))}
+              {dict.spotlight.body &&
+                dict.spotlight.body.map((para: string) => (
+                  <p key={para.slice(0, 40)}>{para}</p>
+                ))}
             </div>
           </div>
         </div>
       </Section>
 
-      <div className="text-center -mt-4 mb-8">
-        <a
-          href="#immersion"
-          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-        >
-          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
-          <span aria-hidden>→</span>
-        </a>
-      </div>
+      {/* Removed intermediate navigation pill */}
 
       {/* Immersion / Area8 */}
-      <Section id="immersion" className="bg-white">
+  <Section id="immersion" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk" ? dict.immersion.heading : dict.immersion.heading}
         </h2>
@@ -377,18 +343,9 @@ export default async function LocalizedPage(props: any) {
             {locale === "uk" ? dict.immersion.cta : dict.immersion.cta}
           </Button>
         </div>
-        <div className="mt-16 text-center">
-          <a
-            href="#press-quote"
-            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-          >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
-            <span aria-hidden>→</span>
-          </a>
-        </div>
       </Section>
 
-      <Section className="bg-gradient-to-b from-neutral-50 to-white">
+      <Section className="bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-950">
         <blockquote className="max-w-3xl mx-auto text-center text-xl md:text-2xl font-light leading-relaxed text-neutral-800">
           “{dict.quote.text}”
           <footer className="mt-6 text-sm text-neutral-500">
@@ -397,7 +354,7 @@ export default async function LocalizedPage(props: any) {
         </blockquote>
       </Section>
 
-      <Section id="press-quote" className="bg-neutral-50">
+  <Section id="press-quote" className="bg-neutral-50 dark:bg-neutral-900/60">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="relative aspect-[3/2] rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100">
             <Image
@@ -422,7 +379,7 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <Section id="partners" className="bg-white">
+  <Section id="partners" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
           {locale === "uk" ? "Партнери" : "Partners"}
         </h2>
@@ -438,7 +395,7 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <Section id="revival-team" className="bg-neutral-50">
+  <Section id="revival-team" className="bg-neutral-50 dark:bg-neutral-900/60">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk"
             ? "Люди, які повернули «Креонте»"
@@ -472,7 +429,7 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <Section id="future">
+  <Section id="future" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
           {dict.future.heading}
         </h2>
@@ -485,7 +442,7 @@ export default async function LocalizedPage(props: any) {
         </ul>
       </Section>
 
-      <Section className="bg-neutral-100" id="contact">
+  <Section className="bg-neutral-100 dark:bg-neutral-900/60" id="contact">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">
             {dict.final.title}
@@ -499,7 +456,7 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <footer className="py-10 text-center text-xs text-neutral-500 border-t border-neutral-200 bg-white/70">
+      <footer className="py-10 text-center text-xs text-neutral-500 border-t border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-950/70">
         {dict.footer}
       </footer>
     </div>
