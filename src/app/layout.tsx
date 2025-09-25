@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: [heroImage],
   },
   icons: {
-    icon: "/favicon-alt-k.svg",
+  icon: "/favicon-c.svg",
   },
   metadataBase: new URL("https://example.com"), // TODO: оновити
 };
