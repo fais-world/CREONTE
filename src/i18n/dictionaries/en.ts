@@ -56,12 +56,12 @@ export const en = {
     cardText: "Bringing back the first opera of Dmytro Bortniansky — “CREONTE”",
     body: [
       "In November 2024 in Kyiv the world premiere of “CREONTE” was performed in concert form after 250 years of silence. Under the baton of Herman Makarenko — UNESCO Artist for Peace — the masterpiece was heard with the National Presidential Orchestra and the National Academic Cappella of Ukraine ‘Dumka’. Lead roles: Sergiy Bortnyk (Creonte), Honored Artist of Ukraine Olha Fomichova (Antigona), Danylo Kotok (Emon), Stanislav Pashchuk (Adrast), Marharyta Bilokiz (Ismena). A highlight was the harpsichord part reconstructed and first performed by musicologist and head of the Early Music Department Olha Shadrina-Lychak.",
-      "“The premiere of ‘CREONTE’ is not merely an artistic event; it is a bridge between centuries that reconnects us with our past and helps us better understand ourselves. We reclaim our cultural heritage — and thus hope and strength for our people and future generations,” noted Ukraine’s Minister for Foreign Affairs Andrii Sybiha in his greeting."
-    ]
+      "“The premiere of ‘CREONTE’ is not merely an artistic event; it is a bridge between centuries that reconnects us with our past and helps us better understand ourselves. We reclaim our cultural heritage — and thus hope and strength for our people and future generations,” noted Ukraine’s Minister for Foreign Affairs Andrii Sybiha in his greeting.",
+    ],
   },
   immersion: {
     heading: "Immerse yourself in the world of ‘CREONTE’",
-    cta: "Learn more"
+    cta: "Learn more",
   },
   performers: { heading: "Performers" },
   quote: {
@@ -69,6 +69,13 @@ export const en = {
     source: "UNESCO",
   },
   partners: { heading: "Partners" },
+  gratitude: {
+    heading: "Together we create cultural revival",
+    subtitle: "Thank you for your support",
+    text1: "The return of 'CREONTE' was made possible thanks to the support of partners and patrons who believed in the power of art and its significance for Ukraine and the world. Their participation is a contribution to preserving cultural heritage and opening new pages in European music history.",
+    text2: "We are sincerely grateful to everyone who joined this project. Thanks to you, lost masterpieces come alive again.",
+    cta: "Become a partner",
+  },
   future: {
     heading: "CREONTive Europe",
     items: [

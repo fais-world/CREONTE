@@ -382,7 +382,7 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-  <Section id="partners" className="bg-white dark:bg-neutral-950">
+      <Section id="partners" className="bg-white dark:bg-neutral-950">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
           {locale === "uk" ? "Партнери" : "Partners"}
         </h2>
@@ -398,7 +398,41 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-  <Section id="revival-team" className="bg-neutral-50 dark:bg-neutral-900/60">
+      <Section id="gratitude" className="bg-neutral-50 dark:bg-neutral-900/60">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div className="order-2 md:order-1">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg p-6 md:p-8 border border-neutral-200 dark:border-neutral-700">
+              <h2 className="text-xl md:text-2xl font-semibold mb-4 leading-tight">
+                {dict.gratitude.heading}
+              </h2>
+              <h3 className="text-lg md:text-xl font-medium mb-6 text-neutral-700 dark:text-neutral-300">
+                {dict.gratitude.subtitle}
+              </h3>
+              <p className="text-sm md:text-base leading-relaxed text-neutral-600 dark:text-neutral-400 mb-6">
+                {dict.gratitude.text1}
+              </p>
+              <p className="text-sm md:text-base leading-relaxed text-neutral-600 dark:text-neutral-400 mb-8">
+                {dict.gratitude.text2}
+              </p>
+              <Button className="w-full md:w-auto">
+                {dict.gratitude.cta}
+              </Button>
+            </div>
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-800">
+              <Image
+                src="/media/photo-a11-001.jpg"
+                alt={dict.gratitude.heading}
+                fill
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </Section>  <Section id="revival-team" className="bg-neutral-50 dark:bg-neutral-900/60">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk"
             ? "Люди, які повернули «Креонте»"
