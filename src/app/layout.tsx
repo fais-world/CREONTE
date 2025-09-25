@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import React from "react";
 import "./globals.css";
-import { Inter, Playfair_Display } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 const title = "CREONTE – Відроджена перша опера Дмитра Бортнянського";
 const description =
@@ -50,7 +53,11 @@ export default function RootLayout({
 }) {
   // Theme is toggled by adding/removing 'dark' on <html> (see ThemeToggle component)
   return (
-    <html lang="uk" suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
+    <html
+      lang="uk"
+      suppressHydrationWarning
+      className={`${inter.variable} ${playfair.variable}`}
+    >
       <body className="font-sans">{children}</body>
     </html>
   );

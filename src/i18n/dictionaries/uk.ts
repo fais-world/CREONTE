@@ -4,7 +4,6 @@ export const uk = {
     premiere: "Премʼєра",
     performers: "Виконавці",
     partners: "Партнери",
-    gratitude: "Подяка",
     future: "Майбутнє",
     contact: "Контакти",
   },
