@@ -47,7 +47,7 @@ export const revivalPeople = [
   {
     img: "/media/revival-shumilina.jpg",
     nameUk: "Ольга Шуміліна",
-    textUk: "Музикознавиця, віднайшла рукопис «Креонте» у Лісабоні",
+    textUk: "Музикознавиця, віднайшла рукопис «Креонт» у Лісабоні",
     nameEn: "Olha Shumilina",
     textEn: "Musicologist who found the manuscript in Lisbon",
   },

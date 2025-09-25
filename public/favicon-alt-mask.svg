@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Theatrical mask icon">
+  <defs>
+    <linearGradient id="m" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#262626"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#m)"/>
+  <path d="M18 18c0 10 2 18 6 23s9 7 12 7 8-2 12-7 6-13 6-23c-4 2-10 3-18 3s-14-1-18-3Z" fill="#1f1f1f" stroke="#3a3a3a" stroke-width="2"/>
+  <path d="M26 30c2-2 4-2 6 0M38 30c2-2 4-2 6 0" stroke="#d9d9d9" stroke-width="2" stroke-linecap="round"/>
+  <path d="M28 36c2 2 6 2 8 0" stroke="#f0f0f0" stroke-width="2" stroke-linecap="round"/>
+</svg>

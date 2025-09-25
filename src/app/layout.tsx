@@ -11,7 +11,7 @@ const playfair = Playfair_Display({
 
 const title = "CREONTE – Відроджена перша опера Дмитра Бортнянського";
 const description =
-  "Тимчасовий статичний лендінг про віднайдену після 250 років оперу «Креонте». Демоверсія перед міграцією у CMS.";
+  "Тимчасовий статичний лендінг про віднайдену після 250 років оперу «Креонт». Демоверсія перед міграцією у CMS.";
 // Use local static asset instead of external hotlink (will later migrate to CMS Media collection)
 const heroImage = "/media/hero-logo.jpg";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: [heroImage],
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon-alt-k.svg",
   },
   metadataBase: new URL("https://example.com"), // TODO: оновити
 };

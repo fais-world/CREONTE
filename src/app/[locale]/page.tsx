@@ -373,7 +373,7 @@ export default async function LocalizedPage(props: any) {
           <div>
             <p className="text-lg md:text-xl font-light leading-relaxed mb-4">
               {locale === "uk"
-                ? "Відродження «Креонте» не залишилося непоміченим. Про відкриття та премʼєру писали українські й міжнародні медіа."
+                ? "Відродження «Креонт» не залишилося непоміченим. Про відкриття та премʼєру писали українські й міжнародні медіа."
                 : "The revival of “CREONTE” drew national and international media attention."}
             </p>
             <blockquote className="border-l-4 pl-4 text-neutral-700 dark:text-neutral-300 italic mb-2">
@@ -403,7 +403,9 @@ export default async function LocalizedPage(props: any) {
               <p className="text-sm md:text-base leading-relaxed text-neutral-600 dark:text-neutral-400 mb-6">
                 {dict.gratitude.text2}
               </p>
-              <Button size="sm" className="px-5">{dict.gratitude.cta}</Button>
+              <Button size="sm" className="px-5">
+                {dict.gratitude.cta}
+              </Button>
             </div>
             <div className="flex flex-wrap gap-3">
               {partners.map((pt) => (
@@ -513,7 +515,7 @@ export default async function LocalizedPage(props: any) {
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk"
-            ? "Люди, які повернули «Креонте»"
+            ? "Люди, які повернули «Креонт»"
             : "People Who Revived “CREONTE”"}
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
