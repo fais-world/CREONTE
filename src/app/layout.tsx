@@ -5,7 +5,8 @@ import "./globals.css";
 const title = "CREONTE – Відроджена перша опера Дмитра Бортнянського";
 const description =
   "Тимчасовий статичний лендінг про віднайдену після 250 років оперу «Креонте». Демоверсія перед міграцією у CMS.";
-const heroImage = "http://utox.medved.kiev.ua/creonte/images/creologo.jpg";
+// Use local static asset instead of external hotlink (will later migrate to CMS Media collection)
+const heroImage = "/media/hero-logo.jpg";
 
 export const metadata: Metadata = {
   title,
