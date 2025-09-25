@@ -4,6 +4,7 @@ export const en = {
     premiere: "Premiere",
     performers: "Performers",
     partners: "Partners",
+    gratitude: "Gratitude",
     future: "Future",
     contact: "Contact",
   },

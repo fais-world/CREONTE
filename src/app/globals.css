@@ -6,6 +6,8 @@
 body {
   @apply bg-white text-neutral-900 antialiased font-sans;
 }
+/* Font utility for logo / brand mark */
+.font-logo { @apply font-display tracking-wide; }
 ::selection {
   @apply bg-neutral-900 text-white;
 }

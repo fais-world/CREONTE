@@ -1,4 +1,5 @@
 import ThemeToggle from "@/components/ThemeToggle";
+import Logo from "@/components/Logo";
 import Button from "@/components/ui/Button";
 import {
   heroImage,
@@ -47,11 +48,8 @@ export default async function LocalizedPage(props: any) {
     <div className="font-sans bg-white dark:bg-neutral-950 dark:text-neutral-100">
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-white/80 dark:bg-neutral-950/80 border-b border-neutral-200 dark:border-neutral-800">
         <div className="max-w-7xl mx-auto flex items-center gap-6 px-4 h-14 text-sm">
-          <a
-            href={`/${locale}#hero`}
-            className="font-semibold tracking-wide font-display text-lg"
-          >
-            CREONTE
+          <a href={`/${locale}#hero`} className="font-display">
+            <Logo />
           </a>
           <div className="hidden md:flex gap-4 opacity-90">
             <a href="#story" className="hover:underline">
@@ -65,6 +63,9 @@ export default async function LocalizedPage(props: any) {
             </a>
             <a href="#partners" className="hover:underline">
               {dict.nav.partners}
+            </a>
+            <a href="#gratitude" className="hover:underline">
+              {(dict as any).nav.gratitude}
             </a>
             <a href="#future" className="hover:underline">
               {dict.nav.future}
