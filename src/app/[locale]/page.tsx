@@ -43,7 +43,7 @@ export default async function LocalizedPage(props: any) {
   const locale: Locale = p.locale ?? "uk";
   const dict = getDictionary(locale);
   return (
-    <div className="font-sans bg-white dark:bg-neutral-950 dark:text-neutral-100">
+  <div className="font-sans bg-white dark:bg-neutral-950 dark:text-neutral-100">
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-white/80 dark:bg-neutral-950/80 border-b border-neutral-200 dark:border-neutral-800">
         <div className="max-w-7xl mx-auto flex items-center gap-6 px-4 h-14 text-sm">
           <a
@@ -95,8 +95,8 @@ export default async function LocalizedPage(props: any) {
         id="hero"
         className="pt-32 md:pt-40 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-950"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-stretch md:items-center">
-          <div>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start md:items-stretch">
+          <div className="flex flex-col" id="hero-text-col">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               {dict.hero.title}
             </h1>
@@ -109,15 +109,17 @@ export default async function LocalizedPage(props: any) {
               <Button variant="ghost">{dict.hero.ctas.partner}</Button>
             </div>
           </div>
-          <div className="relative flex items-center justify-center w-full max-w-[460px] md:max-w-[520px] mx-auto aspect-square md:aspect-[4/5] lg:aspect-[3/4]">
-            <Image
-              src={heroImage}
-              alt="CREONTE"
-              width={800}
-              height={800}
-              className="w-full h-full object-contain rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40 dark:bg-neutral-800/40"
-              priority
-            />
+          <div className="relative flex items-center justify-center w-full max-w-[440px] md:max-w-[500px] mx-auto">
+            <div className="relative w-full h-full max-h-[640px] md:max-h-[600px] flex items-center justify-center">
+              <Image
+                src={heroImage}
+                alt="CREONTE"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40 dark:bg-neutral-800/40"
+                priority
+              />
+            </div>
           </div>
         </div>
       </Section>
@@ -178,7 +180,9 @@ export default async function LocalizedPage(props: any) {
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
               {dict.premiere.text}
             </p>
-            <Button variant="outline">{dict.premiere.gallery}</Button>
+            <Button variant="outline" disabled title="Coming soon">
+              {dict.premiere.gallery}
+            </Button>
           </div>
           <div>
             <Image
@@ -459,6 +463,14 @@ export default async function LocalizedPage(props: any) {
       <footer className="py-10 text-center text-xs text-neutral-500 border-t border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-950/70">
         {dict.footer}
       </footer>
+      {/* Floating Back To Top */}
+      <a
+        href="#hero"
+        className="fixed bottom-5 right-5 z-40 inline-flex items-center justify-center h-10 w-10 rounded-full bg-neutral-900 text-white dark:bg-neutral-200 dark:text-neutral-900 shadow-lg ring-1 ring-neutral-300 dark:ring-neutral-700 hover:scale-105 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500"
+        aria-label={locale === "uk" ? "Назад нагору" : "Back to top"}
+      >
+        ↑
+      </a>
     </div>
   );
 }
