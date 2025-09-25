@@ -7,6 +7,10 @@ export const en = {
     future: "Future",
     contact: "Contact",
   },
+  common: {
+    next: "Next",
+    more: "Learn more",
+  },
   hero: {
     title:
       "Rediscovered masterwork: the first opera by Dmytro Bortniansky – “CREONTE”",

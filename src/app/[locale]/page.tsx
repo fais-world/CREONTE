@@ -252,9 +252,9 @@ export default async function LocalizedPage(props: any) {
 
       <Section
         id="hero"
-        className="pt-32 md:pt-44 bg-gradient-to-b from-neutral-50 to-white"
+        className="pt-32 md:pt-40 bg-gradient-to-b from-neutral-50 to-white"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-stretch md:items-center">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               {dict.hero.title}
@@ -267,14 +267,22 @@ export default async function LocalizedPage(props: any) {
               <Button variant="outline">{dict.hero.ctas.invite}</Button>
               <Button variant="ghost">{dict.hero.ctas.partner}</Button>
             </div>
+            <div className="mt-8">
+              <a
+                href="#story"
+                className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+              >
+                {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+              </a>
+            </div>
           </div>
-          <div className="relative flex items-center justify-center w-full max-w-[560px] mx-auto aspect-square md:aspect-[5/4]">
+          <div className="relative flex items-center justify-center w-full max-w-[540px] mx-auto aspect-square md:aspect-[4/5] lg:aspect-[3/4]">
             <Image
               src={heroImage}
               alt="CREONTE"
               width={800}
               height={800}
-              className="w-full h-full object-cover rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40"
+              className="w-full h-full object-contain md:object-cover rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40"
               priority
             />
           </div>
@@ -307,6 +315,14 @@ export default async function LocalizedPage(props: any) {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <a
+            href="#premiere"
+            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+          >
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+          </a>
         </div>
       </Section>
 
@@ -350,6 +366,14 @@ export default async function LocalizedPage(props: any) {
             />
           </div>
         </div>
+        <div className="mt-10 text-center">
+          <a
+            href="#unesco"
+            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+          >
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+          </a>
+        </div>
       </Section>
 
       {/* (Legacy temporary gallery & team sections removed; replaced by UNESCO gallery, performers and revival team sections) */}
@@ -380,6 +404,14 @@ export default async function LocalizedPage(props: any) {
           <Button variant="outline">
             {locale === "uk" ? "До Галереї" : "Open Gallery"}
           </Button>
+        </div>
+        <div className="mt-10 text-center">
+          <a
+            href="#performers"
+            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+          >
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+          </a>
         </div>
       </Section>
 
@@ -418,6 +450,15 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
+      <div className="text-center -mt-6 mb-12">
+        <a
+          href="#spotlight"
+          className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+        >
+          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+        </a>
+      </div>
+
       {/* Spotlight / Area7 */}
       <Section id="spotlight" className="bg-neutral-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
@@ -451,6 +492,15 @@ export default async function LocalizedPage(props: any) {
           </div>
         </div>
       </Section>
+
+      <div className="text-center -mt-6 mb-12">
+        <a
+          href="#immersion"
+          className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+        >
+          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+        </a>
+      </div>
 
       {/* Immersion / Area8 */}
       <Section id="immersion" className="bg-white">
@@ -488,6 +538,14 @@ export default async function LocalizedPage(props: any) {
           <Button variant="outline">
             {locale === "uk" ? dict.immersion.cta : dict.immersion.cta}
           </Button>
+        </div>
+        <div className="mt-10 text-center">
+          <a
+            href="#press-quote"
+            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+          >
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+          </a>
         </div>
       </Section>
 
