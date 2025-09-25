@@ -113,6 +113,14 @@ export const uk = {
     invite: "Запросити постановку",
     partner: "Партнерство",
   },
-  footer: "© 2025 Креонте Опера. Тимчасова статична версія.",
+  footer: "© 2025. Усі права захищено.",
+  link: {
+    prefix: "Створено компанією",
+    label: "Fantastic AI Studio",
+    href: "https://fais.world/",
+    suffix: ".",
+  },
 };
+// (Usage example in a React/Next component)
+// <span>{dict.link.prefix} <Link href={dict.link.href}>{dict.link.label}</Link>{dict.link.suffix}</span>
 export type UkDict = typeof uk;

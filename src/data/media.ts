@@ -16,6 +16,6 @@ export const unescoImages = [
 
 export const mediaImages = [
   "/media/presskit-image-1.jpg",
-  "/media/presskit-image-2.jpg", 
+  "/media/presskit-image-2.jpg",
   "/media/presskit-image-3.jpg",
 ];

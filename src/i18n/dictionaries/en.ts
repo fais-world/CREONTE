@@ -113,6 +113,12 @@ export const en = {
     invite: "Invite production",
     partner: "Partnership",
   },
-  footer: "© 2025 CREONTE Opera. Temporary static version.",
+  footer: "© 2025. All rights reserved.",
+  link: {
+    prefix: "Crafted by",
+    label: "Fantastic AI Studio",
+    href: "https://fais.world/",
+    suffix: ".",
+  },
 };
 export type EnDict = typeof en;
