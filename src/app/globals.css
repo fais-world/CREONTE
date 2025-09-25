@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme */
+body {
+  @apply bg-white text-neutral-900 antialiased font-sans;
+}
+::selection {
+  @apply bg-neutral-900 text-white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-fg: #111111;
+  --color-muted: #555555;
+  --color-border: #e5e5e5;
+  --color-accent: #111111;
+}
+.dark {
+  --color-bg: #0a0a0a;
+  --color-fg: #ffffff;
+  --color-muted: #b3b3b3;
+  --color-border: #262626;
+  --color-accent: #ffffff;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/* Dark mode overrides */
+html.dark body {
+  @apply bg-neutral-900 text-neutral-100;
+}
+html.dark ::selection {
+  @apply bg-white text-black;
+}
+
+/* Utilities */
+.card {
+  @apply border border-neutral-200 dark:border-neutral-800 rounded-lg bg-white dark:bg-neutral-900 shadow-sm;
+}
+.btn-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-900 dark:focus-visible:ring-neutral-100 focus-visible:ring-offset-white dark:focus-visible:ring-offset-neutral-900;
+}
