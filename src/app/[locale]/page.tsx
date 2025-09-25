@@ -550,16 +550,32 @@ export default async function LocalizedPage(props: any) {
       </Section>
 
       <Section id="future" className="bg-white dark:bg-neutral-950">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
-          {dict.future.heading}
-        </h2>
-        <ul className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto list-disc pl-5 text-neutral-700">
-          {dict.future.items.map((f: string) => (
-            <li key={f} className="leading-relaxed">
-              {f}
-            </li>
-          ))}
-        </ul>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div className="order-2 md:order-1">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-800">
+              <Image
+                src="/media/europe-map.jpg"
+                alt={dict.future.heading}
+                fill
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="order-1 md:order-2">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-8">
+              {dict.future.heading}
+            </h2>
+            <ul className="grid gap-4 list-disc pl-5 text-neutral-700 dark:text-neutral-300">
+              {dict.future.items.map((f: string) => (
+                <li key={f} className="leading-relaxed">
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </Section>
 
       <Section className="bg-neutral-100 dark:bg-neutral-900/60" id="contact">

@@ -82,7 +82,8 @@ export const en = {
     title: "Theatrical Production",
   },
   media: {
-    title: "Open for media collaboration\nEverything you need for your publication", 
+    title:
+      "Open for media collaboration\nEverything you need for your publication",
     subtitle:
       "We have prepared a convenient press kit for journalists and media partners.\nHere you will find",
     items: [
@@ -105,7 +106,7 @@ export const en = {
     ],
   },
   final: {
-    title: "CREONTE has returned to live eternally", 
+    title: "CREONTE has returned to live eternally",
     text: "Discovered in a distant archive / brought back from oblivion, it resounds in Kyiv today and prepares to embark on a world journey. Its music has become a symbol of revival and proof that culture is stronger than time, wars and oblivion.",
     subtitle: "Join us: listen, support, share.",
     listen: "Listen",
