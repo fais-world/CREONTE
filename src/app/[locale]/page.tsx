@@ -599,9 +599,9 @@ export default async function LocalizedPage(props: any) {
 
       <footer className="py-10 text-center text-xs text-neutral-500 border-t border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-950/70 space-y-2">
         <div>{dict.footer}</div>
-        { (dict as any).link && (
+        {(dict as any).link && (
           <div className="text-[11px] tracking-wide">
-            {(dict as any).link.prefix} {" "}
+            {(dict as any).link.prefix}{" "}
             <a
               href={(dict as any).link.href}
               target="_blank"
