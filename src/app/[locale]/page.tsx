@@ -95,8 +95,8 @@ export default async function LocalizedPage(props: any) {
         id="hero"
         className="pt-32 md:pt-40 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-950"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start md:items-stretch">
-          <div className="flex flex-col" id="hero-text-col">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col justify-center min-h-[400px] md:min-h-[480px]">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               {dict.hero.title}
             </h1>
@@ -109,17 +109,16 @@ export default async function LocalizedPage(props: any) {
               <Button variant="ghost">{dict.hero.ctas.partner}</Button>
             </div>
           </div>
-          <div className="relative flex items-center justify-center w-full max-w-[440px] md:max-w-[500px] mx-auto">
-            <div className="relative w-full h-full max-h-[640px] md:max-h-[600px] flex items-center justify-center">
-              <Image
-                src={heroImage}
-                alt="CREONTE"
-                width={800}
-                height={800}
-                className="w-full h-auto object-contain rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40 dark:bg-neutral-800/40"
-                priority
-              />
-            </div>
+          <div className="relative flex items-center justify-center w-full max-w-[400px] md:max-w-[450px] mx-auto h-[400px] md:h-[480px]">
+            <Image
+              src={heroImage}
+              alt="CREONTE"
+              width={600}
+              height={600}
+              className="w-full h-full object-contain rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40 dark:bg-neutral-800/40"
+              priority
+              sizes="(max-width: 768px) 400px, 450px"
+            />
           </div>
         </div>
       </Section>
