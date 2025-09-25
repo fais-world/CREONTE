@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "uk_UA",
     url: "https://example.com", // TODO: продакшн URL
-  siteName: "CREONTE Opera",
+    siteName: "CREONTE Opera",
     images: [
       {
         url: heroImage,
         width: 1200,
         height: 630,
-  alt: "CREONTE Opera",
+        alt: "CREONTE Opera",
       },
     ],
   },
