@@ -2,10 +2,10 @@ import ThemeToggle from "@/components/ThemeToggle";
 import Button from "@/components/ui/Button";
 import {
   heroImage,
+  mediaImages,
   premiereImage,
   storyImages,
   unescoImages,
-  mediaImages,
 } from "@/data/media";
 import {
   immerseCards,
@@ -464,14 +464,14 @@ export default async function LocalizedPage(props: any) {
       <Section id="media" className="bg-neutral-50 dark:bg-neutral-900/60">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-900 dark:text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-900 dark:text-white leading-tight whitespace-pre-line">
               {dict.media.title}
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed whitespace-pre-line">
               {dict.media.subtitle}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             {dict.media.items.map((item, index) => (
               <div key={index} className="group">
@@ -494,15 +494,15 @@ export default async function LocalizedPage(props: any) {
               </div>
             ))}
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="#"
               className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-center inline-block"
             >
               {dict.media.cta.presskit}
             </a>
-            <a 
+            <a
               href="#"
               className="border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-center inline-block"
             >
@@ -567,7 +567,12 @@ export default async function LocalizedPage(props: any) {
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">
             {dict.final.title}
           </h2>
-          <p className="text-neutral-600 mb-8">{dict.final.text}</p>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed">
+            {dict.final.text}
+          </p>
+          <p className="text-neutral-700 dark:text-neutral-300 mb-8 font-medium">
+            {dict.final.subtitle}
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button>{dict.final.listen}</Button>
             <Button variant="outline">{dict.final.invite}</Button>

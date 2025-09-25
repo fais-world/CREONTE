@@ -16,6 +16,6 @@ export const unescoImages = [
 
 export const mediaImages = [
   "/media/photo-a14-001.jpg",
-  "/media/photo-a14-002.jpg", 
+  "/media/photo-a14-002.jpg",
   "/media/photo-a14-003.jpg",
 ];
