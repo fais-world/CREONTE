@@ -101,7 +101,7 @@ const performersData = [
     roleUk: "Креонт",
     descUk: "Соліст Нац. філармонії, лауреат конкурсів",
     nameEn: "Sergiy Bortnyk",
-    roleEn: "Creont",
+    roleEn: "CREONTE",
     descEn: "Soloist, laureate",
   },
   {
@@ -441,8 +441,8 @@ export default async function LocalizedPage(props: any) {
           <div>
             <p className="text-lg md:text-xl font-light leading-relaxed mb-4">
               {locale === "uk"
-                ? "Відродження «Креонта» не залишилося непоміченим. Про відкриття та премʼєру писали українські й міжнародні медіа."
-                : "The revival of “Creont” drew national and international media attention."}
+                ? "Відродження «Креонте» не залишилося непоміченим. Про відкриття та премʼєру писали українські й міжнародні медіа."
+                : "The revival of “CREONTE” drew national and international media attention."}
             </p>
             <blockquote className="border-l-4 pl-4 text-neutral-700 dark:text-neutral-300 italic mb-2">
               {dict.quote.text}
@@ -471,8 +471,8 @@ export default async function LocalizedPage(props: any) {
       <Section id="revival-team" className="bg-neutral-50">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk"
-            ? "Люди, які повернули «Креонта»"
-            : "People Who Revived “Creont”"}
+            ? "Люди, які повернули «Креонте»"
+            : "People Who Revived “CREONTE”"}
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {revivalPeople.map((p) => (

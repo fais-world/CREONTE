@@ -9,8 +9,8 @@ export const en = {
   },
   hero: {
     title:
-      "Rediscovered masterwork: the first opera by Dmytro Bortniansky – “Creont”",
-    subtitle: "After 250 years of silence “Creont” returns to the stage",
+      "Rediscovered masterwork: the first opera by Dmytro Bortniansky – “CREONTE”",
+    subtitle: "After 250 years of silence “CREONTE” returns to the stage",
     ctas: {
       listen: "Listen",
       invite: "Invite the production",
@@ -18,10 +18,10 @@ export const en = {
     },
   },
   story: {
-    heading: "The incredible story of “Creont”",
+    heading: "The incredible story of “CREONTE”",
     cards: [
       {
-        title: "Birth of “Creont”",
+        title: "Birth of “CREONTE”",
         text: "How Bortniansky created his first masterpiece that impressed Venice.",
       },
       {
@@ -61,12 +61,12 @@ export const en = {
     ],
   },
   final: {
-    title: "Creont has returned to live",
+    title: "CREONTE has returned to life",
     text: "Join: listen, support, share.",
     listen: "Listen",
     invite: "Invite production",
     partner: "Partnership",
   },
-  footer: "© 2025 Creont Opera. Temporary static version.",
+  footer: "© 2025 CREONTE Opera. Temporary static version.",
 };
 export type EnDict = typeof en;
