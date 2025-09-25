@@ -8,7 +8,7 @@ interface Params {
   params: { locale: Locale };
 }
 
-const heroImage = "/media/hero-logo.jpg";
+const heroImage = "/media/hero-logo.jpg"; // Consider replacing with higher-res dedicated hero asset later
 const storyImages = [
   "/media/story-rediscovery.jpg",
   "/media/story-manuscript-pages.jpg",
@@ -99,82 +99,82 @@ const performersData = [
     img: "/media/performer-bortnyk.jpg",
     nameUk: "Сергій Бортник",
     roleUk: "Креонт",
-    descUk: "Соліст Нац. філармонії, лауреат конкурсів",
+    descUk: "Соліст Національної філармонії України, лауреат міжнародних конкурсів",
     nameEn: "Sergiy Bortnyk",
     roleEn: "CREONTE",
-    descEn: "Soloist, laureate",
+    descEn: "Soloist of the National Philharmonic of Ukraine, international competition laureate",
   },
   {
     img: "/media/performer-fomichova.jpg",
     nameUk: "Ольга Фомічова",
     roleUk: "Антігона",
-    descUk: "Солістка Нац. опери України",
+    descUk: "Солістка Національної опери України, Заслужена артистка України, лауреатка міжнародних конкурсів",
     nameEn: "Olha Fomichova",
     roleEn: "Antigona",
-    descEn: "National Opera soloist",
+    descEn: "Soloist of the National Opera of Ukraine, Honored Artist of Ukraine",
   },
   {
     img: "/media/performer-kotok.jpg",
     nameUk: "Данило Коток",
     roleUk: "Емон",
-    descUk: "Соліст оперної студії",
+    descUk: "Соліст Київського муніципального академічного театру опери та балету, оперної студії НМАУ",
     nameEn: "Danylo Kotok",
     roleEn: "Emon",
-    descEn: "Opera studio soloist",
+    descEn: "Soloist of Kyiv Municipal Academic Opera & Ballet Theatre, NMAU opera studio",
   },
   {
     img: "/media/performer-pashchuk.jpg",
     nameUk: "Станіслав Пащук",
     roleUk: "Адраст",
-    descUk: "Лауреат міжнародних конкурсів",
+    descUk: "Соліст Київського муніципального академічного театру опери та балету, лауреат міжнародних конкурсів",
     nameEn: "Stanislav Pashchuk",
     roleEn: "Adrast",
-    descEn: "Prize-winning baritone",
+    descEn: "Soloist of Kyiv Municipal Academic Opera & Ballet Theatre, international prize-winner",
   },
   {
     img: "/media/performer-bilokiz.jpg",
     nameUk: "Маргарита Білокіз",
     roleUk: "Ісмена",
-    descUk: "Мецо-сопрано",
+    descUk: "Мецо-сопрано, лауреатка та дипломантка міжнародних конкурсів",
     nameEn: "Marharyta Bilokiz",
     roleEn: "Ismena",
-    descEn: "Mezzo-soprano",
+    descEn: "Mezzo-soprano, award-winning competition laureate",
   },
   {
     img: "/media/performer-shadrina-lychak.jpg",
     nameUk: "Ольга Шадріна-Личак",
-    roleUk: "Клавесин",
-    descUk: "Чембало, канд. мистецтвозн.",
+    roleUk: "Соло на клавесині",
+    descUk: "Завідувачка кафедри старовинної музики, кандидатка мистецтвознавства, лауреатка міжнародних конкурсів",
     nameEn: "Olha Shadrina-Lychak",
-    roleEn: "Harpsichord",
-    descEn: "Harpsichord, musicology PhD",
+    roleEn: "Harpsichord solo",
+    descEn: "Head of Early Music Dept., musicology PhD, competition laureate",
   },
   {
     img: "/media/performer-dumka-choir.jpg",
-    nameUk: "КАПЕЛА «ДУМКА»",
+    nameUk: "Національна заслужена академічна капела України «ДУМКА»",
     roleUk: "Хор",
-    descUk: "Нац. заслужена академічна капела",
-    nameEn: "Dumka Choir",
+    descUk: "Один з найвідоміших хорових колективів України з славетними традиціями та власним стилем. Художній керівник Євген Савчук — Герой України, лауреат Національної премії України ім. Т.Г. Шевченка, Народний артист України, професор, член Академії мистецтв України",
+    nameEn: "National Academic Cappella of Ukraine 'Dumka'",
     roleEn: "Choir",
-    descEn: "National academic choir",
+    descEn: "Renowned Ukrainian choir with rich traditions. Artistic Director: Yevhen Savchuk, Hero of Ukraine, Shevchenko Prize & People's Artist laureate",
   },
   {
     img: "/media/performer-presidential-orchestra.jpg",
-    nameUk: "Нац. президентський оркестр",
+    nameUk: "Національний президентський оркестр",
     roleUk: "Оркестр",
-    descUk: "Військово-музичний колектив",
+    descUk: "Унікальний військово-музичний колектив, елемент культурно-дипломатичної символіки держави. Від 1991 зберігає і розвиває традиції, промотує світову музичну культуру. Директор — полковник Максим Гусак",
     nameEn: "National Presidential Orchestra",
     roleEn: "Orchestra",
-    descEn: "Military-musical ensemble",
+    descEn: "Unique military-musical ensemble promoting cultural diplomacy. Director: Colonel Maksym Husak",
   },
   {
     img: "/media/performer-makarenko.jpg",
     nameUk: "Герман Макаренко",
     roleUk: "Диригент",
-    descUk: "Народний артист України",
+    descUk: "Диригент-постановник світової прем’єри, Народний артист України, диригент Національної опери України, художній керівник оркестру «Київ-Класик», доктор, професор, Посол української культури, Артист ЮНЕСКО в ім'я миру",
     nameEn: "Herman Makarenko",
     roleEn: "Conductor",
-    descEn: "People’s Artist of Ukraine",
+    descEn: "World premiere conductor; People's Artist of Ukraine; Kyiv Classic Orchestra artistic director; UNESCO Artist for Peace",
   },
 ];
 
@@ -252,9 +252,9 @@ export default async function LocalizedPage(props: any) {
 
       <Section
         id="hero"
-        className="pt-32 md:pt-40 bg-gradient-to-b from-neutral-50 to-white"
+        className="pt-32 md:pt-44 bg-gradient-to-b from-neutral-50 to-white"
       >
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               {dict.hero.title}
@@ -268,13 +268,13 @@ export default async function LocalizedPage(props: any) {
               <Button variant="ghost">{dict.hero.ctas.partner}</Button>
             </div>
           </div>
-          <div className="relative flex items-center justify-center max-w-[420px] mx-auto aspect-square">
+          <div className="relative flex items-center justify-center w-full max-w-[560px] mx-auto aspect-square md:aspect-[5/4]">
             <Image
               src={heroImage}
               alt="CREONTE"
               width={800}
               height={800}
-              className="w-full h-full object-contain rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40"
+              className="w-full h-full object-cover rounded-lg shadow-soft ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white/40"
               priority
             />
           </div>
@@ -409,12 +409,85 @@ export default async function LocalizedPage(props: any) {
                 <div className="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-1">
                   {locale === "uk" ? p.roleUk : p.roleEn}
                 </div>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-snug">
+                <p className="text-[11px] md:text-xs text-neutral-600 dark:text-neutral-400 leading-snug whitespace-pre-line">
                   {locale === "uk" ? p.descUk : p.descEn}
                 </p>
               </div>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Spotlight / Area7 */}
+      <Section id="spotlight" className="bg-neutral-50">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+          <div className="flex flex-col gap-6">
+            <div className="relative rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 aspect-[4/3]">
+              <Image
+                src="/media/performer-makarenko.jpg"
+                alt={locale === "uk" ? dict.spotlight.cardTitle : dict.spotlight.cardTitle}
+                fill
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+              <div className="font-semibold text-lg mb-1">{dict.spotlight.cardTitle}</div>
+              <div className="text-sm text-neutral-500 mb-2">{dict.spotlight.cardSubtitle}</div>
+              <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+                {dict.spotlight.cardText}
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+              {dict.spotlight.heading}
+            </h2>
+            <div className="space-y-5 text-sm md:text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
+              {dict.spotlight.body && dict.spotlight.body.map((para: string) => (
+                <p key={para.slice(0,40)}>{para}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Immersion / Area8 */}
+      <Section id="immersion" className="bg-white">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
+          {locale === "uk" ? dict.immersion.heading : dict.immersion.heading}
+        </h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {immerseCards.map((c) => (
+            <a
+              key={c.img}
+              href="#"
+              className="group relative rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 flex flex-col"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={c.img}
+                  alt={locale === "uk" ? c.titleUk : c.titleEn}
+                  fill
+                  sizes="(max-width:768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
+              <div className="p-4 flex flex-col gap-2 bg-white dark:bg-neutral-900 flex-1">
+                <div className="font-medium text-sm md:text-base">
+                  {locale === "uk" ? c.titleUk : c.titleEn}
+                </div>
+                <div className="text-xs text-neutral-600 dark:text-neutral-400 leading-snug">
+                  {locale === "uk" ? c.textUk : c.textEn}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <Button variant="outline">
+            {locale === "uk" ? dict.immersion.cta : dict.immersion.cta}
+          </Button>
         </div>
       </Section>
 

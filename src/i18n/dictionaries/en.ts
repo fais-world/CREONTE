@@ -45,6 +45,20 @@ export const en = {
     text: "The first opera revived with UNESCO support. A symbol of Ukraine’s cultural memory returning.",
     gallery: "Gallery",
   },
+  spotlight: {
+    heading: "From Kyiv — into the hearts of the world",
+    cardTitle: "Herman Makarenko",
+    cardSubtitle: "Project author",
+    cardText: "Bringing back the first opera of Dmytro Bortniansky — “CREONTE”",
+    body: [
+      "In November 2024 in Kyiv the world premiere of “CREONTE” was performed in concert form after 250 years of silence. Under the baton of Herman Makarenko — UNESCO Artist for Peace — the masterpiece was heard with the National Presidential Orchestra and the National Academic Cappella of Ukraine ‘Dumka’. Lead roles: Sergiy Bortnyk (Creonte), Honored Artist of Ukraine Olha Fomichova (Antigona), Danylo Kotok (Emon), Stanislav Pashchuk (Adrast), Marharyta Bilokiz (Ismena). A highlight was the harpsichord part reconstructed and first performed by musicologist and head of the Early Music Department Olha Shadrina-Lychak.",
+      "“The premiere of ‘CREONTE’ is not merely an artistic event; it is a bridge between centuries that reconnects us with our past and helps us better understand ourselves. We reclaim our cultural heritage — and thus hope and strength for our people and future generations,” noted Ukraine’s Minister for Foreign Affairs Andrii Sybiha in his greeting."
+    ]
+  },
+  immersion: {
+    heading: "Immerse yourself in the world of ‘CREONTE’",
+    cta: "Learn more"
+  },
   performers: { heading: "Performers" },
   quote: {
     text: "“The cultural heritage of the first opera by Dmytro Bortniansky has returned to the world thanks to an exceptional initiative under UNESCO support.”",
