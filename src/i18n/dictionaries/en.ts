@@ -76,6 +76,9 @@ export const en = {
     text2: "We are sincerely grateful to everyone who joined this project. Thanks to you, lost masterpieces come alive again.",
     cta: "Become a partner",
   },
+  theatrical: {
+    title: "Theatrical Production",
+  },
   future: {
     heading: "CREONTive Europe",
     items: [

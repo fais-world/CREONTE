@@ -432,7 +432,33 @@ export default async function LocalizedPage(props: any) {
             </div>
           </div>
         </div>
-      </Section>  <Section id="revival-team" className="bg-neutral-50 dark:bg-neutral-900/60">
+      </Section>
+
+      <Section id="theatrical" className="bg-white dark:bg-neutral-950">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="bg-neutral-50 dark:bg-neutral-900/60 rounded-lg p-6 md:p-8 border border-neutral-200 dark:border-neutral-700">
+              <h2 className="text-2xl md:text-3xl font-semibold text-center">
+                {dict.theatrical.title}
+              </h2>
+            </div>
+          </div>
+          <div>
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-800">
+              <Image
+                src="/media/photo-a13-001.jpg"
+                alt={dict.theatrical.title}
+                fill
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="revival-team" className="bg-neutral-50 dark:bg-neutral-900/60">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
           {locale === "uk"
             ? "Люди, які повернули «Креонте»"
