@@ -3,194 +3,26 @@ import Button from "@/components/ui/Button";
 import { getDictionary, locales, type Locale } from "@/i18n/getDictionary";
 import Image from "next/image";
 import React from "react";
+import { heroImage, storyImages, premiereImage, unescoImages } from "@/data/media";
+import { immerseCards, revivalPeople, performersData, partners } from "@/data/people";
 
 interface Params {
   params: { locale: Locale };
 }
 
-const heroImage = "/media/hero-logo.jpg"; // Consider replacing with higher-res dedicated hero asset later
-const storyImages = [
-  "/media/story-rediscovery.jpg",
-  "/media/story-manuscript-pages.jpg",
-  "/media/story-cultural-legacy.jpg",
-];
-const premiereImage = "/media/premiere-orchestra.jpg"; // Area5
-// UNESCO support gallery (Area6)
-const unescoImages = [
-  "/media/unesco-support-1.jpg",
-  "/media/unesco-support-2.jpg",
-  "/media/unesco-support-3.jpg",
-  "/media/unesco-support-4.jpg",
-  "/media/unesco-support-5.jpg",
-  "/media/unesco-support-6.jpg",
-];
-// Immersion cards (Area8)
-const immerseCards = [
-  {
-    img: "/media/immersion-organisers.jpg",
-    titleUk: "Співорганізатори говорять",
-    textUk: "Про ідею повернення і зусилля, яких доклали",
-    titleEn: "Organisers Speak",
-    textEn: "On the idea and effort behind the return",
-  },
-  {
-    img: "/media/immersion-manuscript.jpg",
-    titleUk: "Історичний контекст",
-    textUk: "Сторінки рукопису, що зберігалися понад два століття",
-    titleEn: "Historical Context",
-    textEn: "Manuscript pages preserved for centuries",
-  },
-  {
-    img: "/media/immersion-recognition.jpg",
-    titleUk: "Визнання",
-    textUk: "Матеріали ЮНЕСКО та архівні публікації",
-    titleEn: "Recognition",
-    textEn: "UNESCO materials & archival publications",
-  },
-  {
-    img: "/media/immersion-legacy.jpg",
-    titleUk: "Спадщина Бортнянського",
-    textUk: "Вплив опери на світову культуру й ідентичність",
-    titleEn: "Bortniansky Legacy",
-    textEn: "Influence on global culture & identity",
-  },
-  {
-    img: "/media/immersion-invitation.jpg",
-    titleUk: "Запрошення до співпраці",
-    textUk: "Слухайте фрагменти онлайн",
-    titleEn: "Invitation to Collaborate",
-    textEn: "Listen to fragments online",
-  },
-  {
-    img: "/media/immersion-media.jpg",
-    titleUk: "Зустріч з мистецтвом",
-    textUk: "Відео з премʼєри та фото",
-    titleEn: "Meet the Art",
-    textEn: "Premiere video & photos",
-  },
-];
-// People who revived (Area12 subset) – using the first three; later can expand
-const revivalPeople = [
-  {
-    img: "/media/revival-shumilina.jpg",
-    nameUk: "Ольга Шуміліна",
-    textUk: "Музикознавиця, віднайшла рукопис «Креонте» у Лісабоні",
-    nameEn: "Olha Shumilina",
-    textEn: "Musicologist who found the manuscript in Lisbon",
-  },
-  {
-    img: "/media/revival-makarenko.jpg",
-    nameUk: "Герман Макаренко",
-    textUk: "Диригент-постановник, Артист ЮНЕСКО в імʼя миру",
-    nameEn: "Herman Makarenko",
-    textEn: "Conductor of the world premiere",
-  },
-  {
-    img: "/media/revival-ensemble.jpg",
-    nameUk: "Колектив музикантів",
-    textUk: "Обʼєднані для культурного відродження",
-    nameEn: "Musicians Collective",
-    textEn: "United for cultural revival",
-  },
-];
-// Performers (Area9) with correct image mapping & condensed descriptions
-const performersData = [
-  {
-    img: "/media/performer-bortnyk.jpg",
-    nameUk: "Сергій Бортник",
-    roleUk: "Креонт",
-    descUk: "Соліст Національної філармонії України, лауреат міжнародних конкурсів",
-    nameEn: "Sergiy Bortnyk",
-    roleEn: "CREONTE",
-    descEn: "Soloist of the National Philharmonic of Ukraine, international competition laureate",
-  },
-  {
-    img: "/media/performer-fomichova.jpg",
-    nameUk: "Ольга Фомічова",
-    roleUk: "Антігона",
-    descUk: "Солістка Національної опери України, Заслужена артистка України, лауреатка міжнародних конкурсів",
-    nameEn: "Olha Fomichova",
-    roleEn: "Antigona",
-    descEn: "Soloist of the National Opera of Ukraine, Honored Artist of Ukraine",
-  },
-  {
-    img: "/media/performer-kotok.jpg",
-    nameUk: "Данило Коток",
-    roleUk: "Емон",
-    descUk: "Соліст Київського муніципального академічного театру опери та балету, оперної студії НМАУ",
-    nameEn: "Danylo Kotok",
-    roleEn: "Emon",
-    descEn: "Soloist of Kyiv Municipal Academic Opera & Ballet Theatre, NMAU opera studio",
-  },
-  {
-    img: "/media/performer-pashchuk.jpg",
-    nameUk: "Станіслав Пащук",
-    roleUk: "Адраст",
-    descUk: "Соліст Київського муніципального академічного театру опери та балету, лауреат міжнародних конкурсів",
-    nameEn: "Stanislav Pashchuk",
-    roleEn: "Adrast",
-    descEn: "Soloist of Kyiv Municipal Academic Opera & Ballet Theatre, international prize-winner",
-  },
-  {
-    img: "/media/performer-bilokiz.jpg",
-    nameUk: "Маргарита Білокіз",
-    roleUk: "Ісмена",
-    descUk: "Мецо-сопрано, лауреатка та дипломантка міжнародних конкурсів",
-    nameEn: "Marharyta Bilokiz",
-    roleEn: "Ismena",
-    descEn: "Mezzo-soprano, award-winning competition laureate",
-  },
-  {
-    img: "/media/performer-shadrina-lychak.jpg",
-    nameUk: "Ольга Шадріна-Личак",
-    roleUk: "Соло на клавесині",
-    descUk: "Завідувачка кафедри старовинної музики, кандидатка мистецтвознавства, лауреатка міжнародних конкурсів",
-    nameEn: "Olha Shadrina-Lychak",
-    roleEn: "Harpsichord solo",
-    descEn: "Head of Early Music Dept., musicology PhD, competition laureate",
-  },
-  {
-    img: "/media/performer-dumka-choir.jpg",
-    nameUk: "Національна заслужена академічна капела України «ДУМКА»",
-    roleUk: "Хор",
-    descUk: "Один з найвідоміших хорових колективів України з славетними традиціями та власним стилем. Художній керівник Євген Савчук — Герой України, лауреат Національної премії України ім. Т.Г. Шевченка, Народний артист України, професор, член Академії мистецтв України",
-    nameEn: "National Academic Cappella of Ukraine 'Dumka'",
-    roleEn: "Choir",
-    descEn: "Renowned Ukrainian choir with rich traditions. Artistic Director: Yevhen Savchuk, Hero of Ukraine, Shevchenko Prize & People's Artist laureate",
-  },
-  {
-    img: "/media/performer-presidential-orchestra.jpg",
-    nameUk: "Національний президентський оркестр",
-    roleUk: "Оркестр",
-    descUk: "Унікальний військово-музичний колектив, елемент культурно-дипломатичної символіки держави. Від 1991 зберігає і розвиває традиції, промотує світову музичну культуру. Директор — полковник Максим Гусак",
-    nameEn: "National Presidential Orchestra",
-    roleEn: "Orchestra",
-    descEn: "Unique military-musical ensemble promoting cultural diplomacy. Director: Colonel Maksym Husak",
-  },
-  {
-    img: "/media/performer-makarenko.jpg",
-    nameUk: "Герман Макаренко",
-    roleUk: "Диригент",
-    descUk: "Диригент-постановник світової прем’єри, Народний артист України, диригент Національної опери України, художній керівник оркестру «Київ-Класик», доктор, професор, Посол української культури, Артист ЮНЕСКО в ім'я миру",
-    nameEn: "Herman Makarenko",
-    roleEn: "Conductor",
-    descEn: "World premiere conductor; People's Artist of Ukraine; Kyiv Classic Orchestra artistic director; UNESCO Artist for Peace",
-  },
-];
-
-const partners = [
-  "UNESCO",
-  "National Opera",
-  'Capella "Dumka"',
-  "National Presidential Orchestra",
-];
 
 const Section = ({
   id,
   children,
   className = "",
 }: React.PropsWithChildren<{ id?: string; className?: string }>) => (
-  <section id={id} className={"scroll-mt-24 py-16 px-4 md:px-8 " + className}>
+  <section
+    id={id}
+    className={
+      "scroll-mt-24 py-20 md:py-24 px-4 md:px-8 [&_:last-child]:mb-0 " +
+      className
+    }
+  >
     {children}
   </section>
 );
@@ -267,12 +99,13 @@ export default async function LocalizedPage(props: any) {
               <Button variant="outline">{dict.hero.ctas.invite}</Button>
               <Button variant="ghost">{dict.hero.ctas.partner}</Button>
             </div>
-            <div className="mt-8">
+            <div className="mt-10">
               <a
                 href="#story"
-                className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+                className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
               >
-                {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+                {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
+                <span aria-hidden>→</span>
               </a>
             </div>
           </div>
@@ -316,12 +149,13 @@ export default async function LocalizedPage(props: any) {
             </div>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-16 text-center">
           <a
             href="#premiere"
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
           >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
+            <span aria-hidden>→</span>
           </a>
         </div>
       </Section>
@@ -366,12 +200,13 @@ export default async function LocalizedPage(props: any) {
             />
           </div>
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-16 text-center">
           <a
             href="#unesco"
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
           >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
+            <span aria-hidden>→</span>
           </a>
         </div>
       </Section>
@@ -408,9 +243,10 @@ export default async function LocalizedPage(props: any) {
         <div className="mt-10 text-center">
           <a
             href="#performers"
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
           >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
+            <span aria-hidden>→</span>
           </a>
         </div>
       </Section>
@@ -450,12 +286,13 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <div className="text-center -mt-6 mb-12">
+      <div className="text-center -mt-4 mb-8">
         <a
           href="#spotlight"
-          className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
         >
-          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
+          <span aria-hidden>→</span>
         </a>
       </div>
 
@@ -493,12 +330,13 @@ export default async function LocalizedPage(props: any) {
         </div>
       </Section>
 
-      <div className="text-center -mt-6 mb-12">
+      <div className="text-center -mt-4 mb-8">
         <a
           href="#immersion"
-          className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
         >
-          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+          {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
+          <span aria-hidden>→</span>
         </a>
       </div>
 
@@ -539,12 +377,13 @@ export default async function LocalizedPage(props: any) {
             {locale === "uk" ? dict.immersion.cta : dict.immersion.cta}
           </Button>
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-16 text-center">
           <a
             href="#press-quote"
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:underline inline-flex items-center gap-1"
+            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide rounded-full border border-neutral-300 dark:border-neutral-700 px-5 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
           >
-            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")} →
+            {dict.common?.next || (locale === "uk" ? "Далі" : "Next")}
+            <span aria-hidden>→</span>
           </a>
         </div>
       </Section>
